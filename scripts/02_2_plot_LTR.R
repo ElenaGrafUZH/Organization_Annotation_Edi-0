@@ -12,8 +12,11 @@ library(cowplot)
 #-------------------------------------------------
 # Input files (edit paths if needed)
 #-------------------------------------------------
-gff_file <- "EDTA_annotation/hifiasm_Edi-0.fasta.mod.EDTA.raw/hifiasm_Edi-0.fasta.mod.LTR.intact.raw.gff3"
-cls_file <- "output/02_LTR_RT/hifiasm_Edi-0.fasta.mod.LTR.raw.fa.rexdb-plant.cls.tsv"
+args <- commandArgs(trailingOnly = TRUE)
+wd <- args[1]
+
+gff_file <- file.path(wd, "output/01_EDTA_annotation/hifiasm_Edi-0.fasta.mod.EDTA.raw/hifiasm_Edi-0.fasta.mod.LTR.intact.raw.gff3")
+cls_file <- file.path(wd, "output/02_LTR_RT/hifiasm_Edi-0.fasta.mod.LTR.raw.fa.rexdb-plant.cls.tsv")
 # cls_file is the output from TEsorter on the raw LTR-RT fasta file
 #-------------------------------------------------
 # Read and preprocess input data
@@ -113,5 +116,5 @@ p_gypsy <- plot_by_clade(anno_cls, "Gypsy", global_ymax)
 # Combine with cowplot side-by-side 
 combined <- plot_grid(p_copia, p_gypsy, ncol = 2, rel_widths = c(1, 1))
 
-ggsave("/outputs/02_LTR_RT/plots/01_LTR_Copia_Gypsy_cladelevel.png", combined, width = 12, height = 10, dpi = 300)
-ggsave("/outputs/02_LTR_RT/plots/01_LTR_Copia_Gypsy_cladelevel.pdf", combined, width = 12, height = 10)
+ggsave(file.path(wd, "/output/02_LTR_RT/plots/01_LTR_Copia_Gypsy_cladelevel.png"), combined, width = 12, height = 10, dpi = 300)
+ggsave(file.path(wd, "/output/02_LTR_RT/plots/01_LTR_Copia_Gypsy_cladelevel.pdf"), combined, width = 12, height = 10)
