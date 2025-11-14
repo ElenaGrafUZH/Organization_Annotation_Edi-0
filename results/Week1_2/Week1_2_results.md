@@ -109,3 +109,45 @@ The plot shows region with high TE density across superfamilies and scaffolds. T
 → most abundant clade in Gypsy: Athila (37.9%)  
 
 ### 4. Dynamics of Transposable Elements (TEs)
+#### Number of elements in each superfamily
+| Class/Subclass |	Count |
+| -------- | ------- |
+| DNA/Helitron |	163 |
+| DNA/DTM |	47 |
+| DNA/DTC |	26 |
+| DNA/DTH |	22 |
+| DNA/DTA |	13 |
+| DNA/MULE-MuDR |	7 |
+| DNA/DTT |	3 |
+| DNA/hAT-Tip100 |	2 |
+| DNA/PIF-Harbinger |	2 |
+| DNA/DNA |	1 |
+| LINE/L1 |	13 |
+| LTR/Copia |	61 |
+| LTR/Gypsy |	53 |
+| MITE/DTA |	12 |
+| MITE/DTH |	12 |
+| MITE/DTM |	12 |
+| MITE/DTC |	2 |
+| RC/Helitron |	5 |
+
+#### Landscape Plot
+![image](Week1_2/05_TE_landscape_plot.png)
+- LINE/L1: from 0.1 to 0.35 with peak between 0.2 and 0.3 (curve)
+    - high divergence
+    - acient activity
+- LTR/Gypsy: peak from 0 - 0.15 and then decreasing
+    - recent expansions
+- LTR/Copia: some peak between 0 and 0.1 and later at around 0.28 - 0.32
+    - some recent expansions but also acient activity
+    - low and high divergence
+- MITE/DTC: high peaks between 0.1 and 0.2
+    - major burst of MITE/DTC activity roughly 6-12 million years ago
+
+#### TE dynamics between Copia and Gypsy
+![image](Week1_2/05_Copia_vs_Gypsy_lineplot.png)
+
+- Gypsy more active recently
+- Copia expansion mostly ancient
+- Gypsy contributes more to current genome size
+- different peaks suggest different waves of expansion
