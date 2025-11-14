@@ -28,7 +28,7 @@ Counts per clade
 The results show that there are differences in the number of full length LTR-RTs between the clades with Athila having the most counts followed by Ale and Reina.
 
 #### Percent Identiy of Clades
-![image](Week1_2/02_LTR_Copia_Gypsy_cladelevel.png)
+![image](02_LTR_Copia_Gypsy_cladelevel.png)
 
 - High percent identity: Ale, Angela, Tekay, Reina → recent insertions
 - Low percent identity: Bianca, Tork, CRM
@@ -77,7 +77,7 @@ Total                  32146        23366153     15.62%
 
 ### Distribution of TEs across the genome 
 
-![image](Week1_2/03-TE_density.png)
+![image](03-TE_density.png)
 - used 13 longest scaffolds -> coverage ~85.7%  
 
 The plot shows region with high TE density across superfamilies and scaffolds. The distribution of the different clades overlap. Gypsy has the broadest, highest peaks while Copia is more puncuated and dispersed along scaffold arms. Peaks highlight centromeric regions.
@@ -85,10 +85,10 @@ The plot shows region with high TE density across superfamilies and scaffolds. T
 ### 3. Refining TE Classification with TEsorter
 #### Counts per clade complete vs incomplete
 
-![image](Week1_2/04_LTR_clade_distribution_barplot.png)
+![image](04_LTR_clade_distribution_barplot.png)
 
 #### Pie chart showing proportion of each clade in both superfamilies
-![image](Week1_2/04_LTR_clade_proportions_piechart.png)
+![image](04_LTR_clade_proportions_piechart.png)
 
 #### Estimate of number of Copia and Gypsy elements in each clade
 | Superfamily |	Clade |	count |	% |
@@ -132,7 +132,7 @@ The plot shows region with high TE density across superfamilies and scaffolds. T
 | RC/Helitron |	5 |
 
 #### Landscape Plot
-![image](Week1_2/05_TE_landscape_plot.png)
+![image](05_TE_landscape_plot.png)
 - LINE/L1: from 0.1 to 0.35 with peak between 0.2 and 0.3 (curve)
     - high divergence
     - acient activity
@@ -145,7 +145,7 @@ The plot shows region with high TE density across superfamilies and scaffolds. T
     - major burst of MITE/DTC activity roughly 6-12 million years ago
 
 #### TE dynamics between Copia and Gypsy
-![image](Week1_2/05_Copia_vs_Gypsy_lineplot.png)
+![image](05_Copia_vs_Gypsy_lineplot.png)
 
 - Gypsy more active recently
 - Copia expansion mostly ancient
