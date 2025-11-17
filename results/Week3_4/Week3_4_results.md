@@ -54,3 +54,57 @@ Tools like InterProScan help in supporting the gene prediction as it removes red
 $ grep -c -w "gene" output/07_Final/UpdateFilter/Edi-0.filtered.genes.renamed.gff3
 ```
 After filtering 69'609 genes remained from MAKER prediction.
+
+### 7. Quality Assessment of Gene Annotations
+#### BUSCO Results
+![image](08_1_busco_figure.png)	
+
+	***** Protein Results: *****
+
+	C:93.2%[S:91.6%,D:1.6%],F:0.4%,M:6.4%,n:4596	   
+	4286	Complete BUSCOs (C)			   
+	4212	Complete and single-copy BUSCOs (S)	   
+	74	Complete and duplicated BUSCOs (D)	   
+	20	Fragmented BUSCOs (F)			   
+	290	Missing BUSCOs (M)			   
+	4596	Total BUSCO groups searched	
+
+	***** Transcripts Results: *****
+
+	C:94.3%[S:90.3%,D:4.0%],F:0.5%,M:5.2%,n:4596	   
+	4337	Complete BUSCOs (C)			   
+	4151	Complete and single-copy BUSCOs (S)	   
+	186	Complete and duplicated BUSCOs (D)	   
+	21	Fragmented BUSCOs (F)			   
+	238	Missing BUSCOs (M)			   
+	4596	Total BUSCO groups searched	
+
+- Complete C: % of BUSCOs fully found
+- single-copy S: % of BUSCOS found once
+- duplicated D: % of BUSCOs found more than once
+- fragmented F: % of BUSCOs partially recovered
+- missing M: % of BUSCOs not found
+- n: number of BUSCO orthologs in reference dataset
+- Protein: high completeness, very low fragmentation, low duplication
+    - C: 93.2%
+    - S: 91.6%
+    - D: 1.6%
+    - F: 0.4%
+    - M: 6.4%
+    - n: 4596
+- Transcripts: slightly higher completeness, more duplicates
+    - C: 94.3%
+    - S: 90.3%
+    - D: 4.0%
+    - F: 0.5%
+    - M: 5.2%
+    - n: 4596
+
+
+#### Gene density vs TE density
+![image](08_2_Edi-0_gene_TE_circos_option2.png)
+
+- gene density higher where TE density is lower
+- generally gene density is higher than TE density
+- Large scaffolds appear to have long stretches of high gene density and almost no TE signal
+- local TE bursts
