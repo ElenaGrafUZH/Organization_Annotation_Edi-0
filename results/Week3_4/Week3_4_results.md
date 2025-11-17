@@ -46,7 +46,7 @@ The annotation edit distance (AED) quantifies how well each gene is supported by
 
 - about 96.9% of the genes of *Edi-0* fall within the AED range of 0.0-0.5 which indicates high confidence in the gene models. The annotation is well supported by the evidence.
 
-#### Support gene predictions with functional annotations
+#### Support gene predictions with functional annotations
 Tools like InterProScan help in supporting the gene prediction as it removes redundant or poorly supported predictions and yields a biologically validated gene set for downstream analyses. 
 
 #### Predicted gene models after filtering
