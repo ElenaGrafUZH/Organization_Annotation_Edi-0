@@ -108,3 +108,16 @@ After filtering 69'609 genes remained from MAKER prediction.
 - generally gene density is higher than TE density
 - Large scaffolds appear to have long stretches of high gene density and almost no TE signal
 - local TE bursts
+
+#### AGAT results
+| Metric | Value | Comment |
+| ------ | ------ | ------- |
+| Number of genes | 33054 | within expected range of A. thaliana accessions (27-36k) |
+| Number of mRNAs | 36517 | slightly higher than genes -> genes with multiple isoforms |
+| Average exons per mRNA | 4.8 | matches known A. thaliana average (4-6 exons) |
+| single-exon genes | 10925 | normal for plants |
+| average gene length | 1902bp | consistent with compact A. thaliana genes |
+| mean CDS length | 1127bp | |
+| mean exon length | 273bp | |
+| UTR presence | 30-40% | acceptable |
+| genome coverage by genes | ~20% | good, expect 20-25% |
