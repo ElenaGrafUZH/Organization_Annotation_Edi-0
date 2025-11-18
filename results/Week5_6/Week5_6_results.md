@@ -84,3 +84,42 @@ Note
 → Repressing flowering 
 
 ### 9. Comparative Genomics with OrthoFinder and GENESPACE
+#### Summary table of orthogroups
+| category | number of orthogroups |
+| ----- | ----- |
+| accessory | 6'649 |
+| core | 21'431 |
+| species_specific | 5'114 |
+
+#### Summary table of genes for *Edi-0*
+| genome | gene_core | gene_accessory | gene_specific | gene_total | percent_core | percent_specific |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
+| Edi_0 | 21'489 | 3'125 | 1'601 | 26'215 | 81.97 | 6.11 |
+
+core → present in all genomes
+species_specific → only in one genome
+accessory → present in >1 but not all
+
+#### Shared with all
+21'431
+
+#### Edi-0 shared with TAIR10
+23'596
+
+#### Unique by genome
+| genome | unique_orthogroups |
+| --- | --- |
+| Edi_0 | 1'507 |
+| Are_6 | 1'036 |
+| Ice_1 | 757 |
+| Etna_2 | 990 | 
+| TAIR10 | 824 |
+
+#### Pangenome frequency plot
+![image](11_pangenome_frequency_plot.png)
+
+- Most orthogroups are shared by all five accessions
+- highly conserved gene content
+- bars at 2, 3, and 4 genomes are present but much smaller than the core
+- moderate accessory genome
+- each accession has some unique orthogroups, but not many
