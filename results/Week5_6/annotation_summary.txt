@@ -1,0 +1,3 @@
+Total_queries_with_hits	26147
+Uncharacterized_hits	1684
+Well_annotated_hits	24463
