@@ -6,9 +6,9 @@
 
 #### Predicted Gene Models
 ```bash
-$ grep -c -w "gene" hifiasm_Edi-0.all.maker.gff
+$ awk '$3 == "gene" {count++} END {print count}' output/06_MAKER/PrepOutput/hifiasm_Edi-0.all.maker.gff
 ```
-MAKER predicted 601'709 gene models in the genome of Edi-0.
+MAKER predicted 33'054 gene models in the genome of Edi-0.
 
 #### Comparison to reference *A. Thaliana* genome
 - arabidopsis thaliana: 27’448 gene count (https://www.uniprot.org/proteomes/UP000006548 (17.11.2025))
@@ -51,9 +51,9 @@ Tools like InterProScan help in supporting the gene prediction as it removes red
 
 #### Predicted gene models after filtering
 ```bash
-$ grep -c -w "gene" output/07_Final/UpdateFilter/Edi-0.filtered.genes.renamed.gff3
+$ awk '$3 == "gene" {count++} END {print count}' output/07_Final/UpdateFilter/Edi-0.filtered.genes.renamed.gff3 
 ```
-After filtering 69'609 genes remained from MAKER prediction.
+After filtering 33'054 genes remained from MAKER prediction.
 
 ### 7. Quality Assessment of Gene Annotations
 #### BUSCO Results
@@ -114,10 +114,19 @@ After filtering 69'609 genes remained from MAKER prediction.
 | ------ | ------ | ------- |
 | Number of genes | 33054 | within expected range of A. thaliana accessions (27-36k) |
 | Number of mRNAs | 36517 | slightly higher than genes -> genes with multiple isoforms |
-| Average exons per mRNA | 4.8 | matches known A. thaliana average (4-6 exons) |
-| single-exon genes | 10925 | normal for plants |
-| average gene length | 1902bp | consistent with compact A. thaliana genes |
-| mean CDS length | 1127bp | |
-| mean exon length | 273bp | |
-| UTR presence | 30-40% | acceptable |
+| Number of mRNAs collapsed isoforms | 33054 | 
+| Median gene length (bp) | 1527 |
+| Max gene length (bp) | 27206 | 
+| Min gene length (bp) | 15 |
+| Median mRNA length (bp) | 1581 |
+| Max mRNA length (bp) | 27206 | 
+| Min mRNA length (bp) | 9 |
+| Median exon length (bp) | 151 |
+| Max exon length (bp) | 7761 | 
+| Min exon length (bp) | 1 |
+| Median intron length (bp) | 100 |
+| Max intron length (bp) | 9595 | 
+| Min intron length (bp) | 20 |
+| Number of monoexonic genes | 10925 |
+| Median number of exons per mRNA | 4.8 | matches known A. thaliana average (4-6 exons) | 
 | genome coverage by genes | ~20% | good, expect 20-25% |
