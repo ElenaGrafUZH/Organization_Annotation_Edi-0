@@ -22,4 +22,5 @@ module load R/4.3.2-foss-2021a
 module load R-bundle-CRAN/2023.11-foss-2021a
 module load R-bundle-Bioconductor/3.18-foss-2021a-R-4.3.2
 
+#*-----Run R Script-----
 Rscript scripts/11_3_process_pangenome.R ${GENESPACEDIR}

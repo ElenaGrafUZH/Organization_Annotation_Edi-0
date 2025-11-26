@@ -31,7 +31,7 @@ busco -i ${TRANSCRIPT} -l brassicales_odb10 -o busco_transcript_output -m transc
     --cpu ${SLURM_CPUS_PER_TASK} \
     --out_path "${OUTDIR}"
 
-#*-----run BUSCO-----
+#*-----BUSCO summary files-----
 PROTEIN_SUMMARY="${OUTDIR}/busco_protein_output/short_summary.specific.brassicales_odb10.busco_protein_output.txt"
 TRANSCRIPT_SUMMARY="${OUTDIR}/busco_transcript_output/short_summary.specific.brassicales_odb10.busco_transcript_output.txt"
 
@@ -49,5 +49,5 @@ if [ ! -f "generate_plot.py" ]; then
     exit 1
 fi
 
-# Run the plot generation
+#*-----generate BUSCO plot-----
 python3 generate_plot.py -wd "${OUTDIR}"

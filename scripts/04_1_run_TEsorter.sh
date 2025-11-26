@@ -27,10 +27,7 @@ cd "$OUTDIR"
 #*-----Extract Copia & Gypsy sequences-----
 echo "Extracting Copia and Gypsy sequences..."
 seqkit grep -r -p "Copia" ${TELIB} > ${INPUTCOPIA}
-
 seqkit grep -r -p "Gypsy" ${TELIB} > ${INPUTGYPSY}
-
-
 
 
 #*-----Run TEsorter-----

@@ -13,6 +13,7 @@ GENESPACEDIR="${WORKDIR}/output/11_GENESPACE"
 COURSEDIR="/data/courses/assembly-annotation-course/CDS_annotation"
 CONTAINER="${COURSEDIR}/containers/genespace_latest.sif"
 
+#*-----Run Genespace-----
 apptainer exec \
     --bind ${COURSEDIR} \
     --bind ${WORKDIR} \

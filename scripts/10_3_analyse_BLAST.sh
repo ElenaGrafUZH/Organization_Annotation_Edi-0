@@ -21,7 +21,7 @@ LONGESTFASTA="${WORKDIR}/output/08_1_BUSCO/prep/Edi-0.proteins.longest.fasta"
 mkdir -p "$OUTDIR"
 cd "$OUTDIR"
 
-#* map UniProt ID to description
+#*-----map UniProt ID to description-----
 grep ">" ${UNIPROTDB} \
     | sed 's/^>//' \
     | awk '{id=$1; $1=""; sub(/^ /,""); print id"\t"$0}' \
@@ -29,7 +29,7 @@ grep ">" ${UNIPROTDB} \
 
 
 
-#* join best hits with description
+#*-----join best hits with description-----
 join -1 2 -2 1 \
     <(sort -k2,2 ${BESTHITS}) \
     <(sort -k1,1 uniprot_map.tsv) \
@@ -37,10 +37,10 @@ join -1 2 -2 1 \
 
 
 
-# Total queries with any UniProt hit
+#*-----Total queries with any UniProt hit-----
 TOTAL=$(wc -l < query_with_desc.tsv)
 
-# Uncharacterized queries
+#*-----Uncharacterized queries-----
 UNCHAR=$(grep -i -E "uncharacterized|hypothetical|putative|unknown" query_with_desc.tsv | wc -l)
 
 # Well-annotated = total - uncharacterized
@@ -50,7 +50,7 @@ echo -e "Total_queries_with_hits\t$TOTAL" > annotation_summary.txt
 echo -e "Uncharacterized_hits\t$UNCHAR" >> annotation_summary.txt
 echo -e "Well_annotated_hits\t$WELL" >> annotation_summary.txt
 
-#* Length bias test
+#*-----Length bias test-----
 # get query Ids 
 #with uniprot hits
 cut -f1 ${BESTHITS} | sort -u > with_hits.txt
@@ -61,7 +61,7 @@ grep ">" ${LONGESTFASTA} \
 
 comm -23 all_ids.txt with_hits.txt > without_hits.txt
 
-#extract fasta sequences
+#*-----extract fasta sequences-----
 #with hits
 awk 'BEGIN{
     while ((getline < "with_hits.txt") > 0) ids[$1]=1
@@ -87,7 +87,7 @@ awk 'BEGIN{
     > proteins_without_hits.fa
 
 
-#compute protein lengths
+#*-----compute protein lengths-----
 #with hits
 awk '
     /^>/ { if (len>0) print len; len=0; next }
@@ -103,7 +103,7 @@ awk '
     ' proteins_without_hits.fa > len_without.txt
 
 
-#summary stats
+#*-----summary stats-----
 echo "WITH HITS:"
 sort -n len_with.txt | awk '
     { a[NR]=$1; sum+=$1 }

@@ -22,6 +22,7 @@ prefix="Edi-0"
 mkdir -p "$OUTDIR"
 cd "$OUTDIR"
 
+#*-----Run InterProScan-----
 apptainer exec --bind ${IPRDATA}:/opt/interproscan/data --bind ${WORKDIR} --bind ${COURSEDIR} --bind ${SCRATCH}:/temp \
     ${CONTAINER} \
     /opt/interproscan/interproscan.sh \

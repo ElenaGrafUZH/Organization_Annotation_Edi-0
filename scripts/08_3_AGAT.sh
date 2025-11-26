@@ -22,6 +22,7 @@ CONTAINER="$COURSEDIR/containers/agat_1.5.1--pl5321hdfd78af_0.sif"
 mkdir -p "$OUTDIR"
 cd "$OUTDIR"
 
+#*-----Run AGAT-----
 apptainer exec --bind ${WORKDIR} --bind ${COURSEDIR} ${CONTAINER} \
     agat_sp_statistics.pl -i "${GFF}" -o annotation.stat
 
