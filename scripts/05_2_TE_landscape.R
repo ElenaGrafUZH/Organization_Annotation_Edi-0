@@ -70,32 +70,17 @@ write.table(rep_table.m,
 # How would that affect the plot if you used counts instead of Mbp?
 #
 
-# Summarise the data
-plot_df <- rep_table.m %>% 
-  filter(fam %in% c("LTR/Copia", "LTR/Gypsy")) %>% 
-  group_by(fam, distance) %>% 
-  summarise(Mbp = sum(value) / 1e6, .groups = "drop") %>%
-  arrange(fam, distance)
-
-# Plot
-ggplot(plot_df, aes(x = distance, y = Mbp, colour = fam)) +
-  geom_line(size = 1.1) +
-  geom_point(size = 1) +
+rep_table.copia.gypsy <- rep_table.m %>% filter(fam %in% c("LTR/Copia", "LTR/Gypsy"))
+#Plot
+ggplot(bla, aes(fill = fam, x = distance, weight = value / 1000000)) +
+  geom_bar() +
   cowplot::theme_cowplot() +
-  labs(
-    x = "Divergence (K)",
-    y = "TE abundance (Mbp)",
-    colour = "Superfamily",
-    title = "TE dynamics of LTR/Copia vs LTR/Gypsy"
-  ) +
-  theme(
-    plot.title = element_text(hjust = 0.5),
-    legend.position = "right"
-  ) +
-  scale_fill_viridis_d(option = "turbo")
+  xlab("Distance") +
+  ylab("Sequence (Mbp)") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 1, size = 9, hjust = 1), plot.title = element_text(hjust = 0.5))
 
 ggsave(
-  file.path(wd, "/output/05_perl/plots/05_Copia_vs_Gypsy_lineplot.png"),
+  file.path(wd, "/output/05_perl/plots/05_Copia_vs_Gypsy.png"),
   width = 10, 
   height = 6, 
   dpi=300

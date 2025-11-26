@@ -145,7 +145,7 @@ The plot shows region with high TE density across superfamilies and scaffolds. T
     - major burst of MITE/DTC activity roughly 6-12 million years ago
 
 #### TE dynamics between Copia and Gypsy
-![image](05_Copia_vs_Gypsy_lineplot.png)
+![image](05_Copia_vs_Gypsy.png)
 
 - Gypsy more active recently
 - Copia expansion mostly ancient
