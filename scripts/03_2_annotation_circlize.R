@@ -29,13 +29,13 @@ custom_ideogram$end <- custom_ideogram$V2
 custom_ideogram <- custom_ideogram[, c("chr", "start", "end")]
 custom_ideogram <- custom_ideogram[order(custom_ideogram$end, decreasing = T), ]
 sum(custom_ideogram$end[1:20])
-total_scaffold_length <- sum(custom_ideogram$end[1:13])
+total_scaffold_length <- sum(custom_ideogram$end[1:12])
 assembly_length <- 149560242
 coverage <- total_scaffold_length / assembly_length
 coverage
 
 # Select only the first 20 longest scaffolds, You can reduce this number if you have longer chromosome scale scaffolds
-custom_ideogram <- custom_ideogram[1:13, ]
+custom_ideogram <- custom_ideogram[1:12, ]
 
 # Function to filter GFF3 data based on Superfamily (You need one track per Superfamily)
 filter_superfamily <- function(gff_data, superfamily, custom_ideogram) {

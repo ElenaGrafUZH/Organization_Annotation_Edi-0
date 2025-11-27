@@ -77,8 +77,8 @@ Total                  32146        23366153     15.62%
 
 ### Distribution of TEs across the genome 
 
-![image](03-TE_density.png)
-- used 13 longest scaffolds -> coverage ~85.7%  
+![image](03-TE_density_with_gene_density.png)
+- used 12 longest scaffolds -> coverage ~84%  
 
 The plot shows region with high TE density across superfamilies and scaffolds. The distribution of the different clades overlap. Gypsy has the broadest, highest peaks while Copia is more puncuated and dispersed along scaffold arms. Peaks highlight centromeric regions.
 
