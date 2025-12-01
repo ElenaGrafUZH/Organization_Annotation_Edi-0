@@ -38,7 +38,7 @@ This quality check demonstrates that the annotation is of good quality and suita
 
 Yes, there is a length bias in proteins without UniProt hits. On average the proteins without UniProt homology are much shorter (178 aa vs. 344 aa) which indicates that they are either short fragments or incomplete gene models.
 
-#### FLC gene (AT5G10140)
+#### FLC gene (AT5G10140)
 ```bash
 $ grep -i "AT5G10140" output/10_BLAST/blastp_output_TAIR10.besthits 
 Edi-00017007-RA AT5G10140.1     49.438  89      37      2       67      147     57      145     1.62e-16        75.1
@@ -96,8 +96,8 @@ Note
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
 | Edi_0 | 21'489 | 3'125 | 1'601 | 26'215 | 81.97 | 6.11 |
 
-core → present in all genomes
-species_specific → only in one genome
+core → present in all genomes  
+species_specific → only in one genome  
 accessory → present in >1 but not all
 
 #### Shared with all
